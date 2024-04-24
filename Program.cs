@@ -78,7 +78,19 @@ foreach (string name in names)
 }
 
 int[] inventory = [200, 450, 700, 175, 250];
-
+int sum = 0;
+int bin = 0;
 foreach(int item in inventory){
-    Console.WriteLine($"item is: {item}");
+    sum += item;
+    bin++;
+    Console.WriteLine($"Bin {bin} = {item} items (Running total: {sum})");
+}
+Console.WriteLine($"We have {sum} items in inventory");
+
+string[] newFraudulentOrderIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
+
+foreach(string nameID in newFraudulentOrderIDs){
+    if(nameID.StartsWith('B')){
+        Console.WriteLine($"fradulent id: nameID");
+    }
 }
