@@ -57,6 +57,9 @@ if(daysUntilExpiration > 5 && daysUntilExpiration <= 10){
 }
 
 
+
+//////////////////////////////////////////////// for each ////////////////////////////////////////////////
+
 string[] fraudulentOrderIDs = new string[3];
 
 fraudulentOrderIDs[0] = "A123";
@@ -97,6 +100,7 @@ foreach(string nameID in newFraudulentOrderIDs){
 
 
 //////////////////////////////////////////////// Student Grade ////////////////////////////////////////////////
+
 // initialize variables - graded assignments 
 int currentAssignments = 5;
 
