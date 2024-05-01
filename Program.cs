@@ -255,3 +255,22 @@ else
     Console.WriteLine("You do not have sufficient privileges.");
 }
 
+
+//////////////////////////////////////////////// Variable Scope ////////////////////////////////////////////////
+
+
+int[] numbers = { 4, 8, 15, 16, 23, 42 };
+int totalNumbers = 0;
+bool found = false;
+
+foreach (int number in numbers)
+{
+    totalNumbers += number;
+    if (number == 42)
+        found = true;
+}
+
+if (found)
+    Console.WriteLine("Set contains 42");
+
+Console.WriteLine($"Total: {totalNumbers}");
