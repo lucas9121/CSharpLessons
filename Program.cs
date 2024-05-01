@@ -224,7 +224,6 @@ foreach (string name in studentNames)
 
 //////////////////////////////////////////////// Boolean Expressions ////////////////////////////////////////////////
 
-
 string permission = "Admin|Manager";
 int level = 53;
 
@@ -256,8 +255,8 @@ else
 }
 
 
-//////////////////////////////////////////////// Variable Scope ////////////////////////////////////////////////
 
+//////////////////////////////////////////////// Variable Scope ////////////////////////////////////////////////
 
 int[] numbers = { 4, 8, 15, 16, 23, 42 };
 int totalNumbers = 0;
@@ -274,3 +273,90 @@ if (found)
     Console.WriteLine("Set contains 42");
 
 Console.WriteLine($"Total: {totalNumbers}");
+
+
+
+//////////////////////////////////////////////// Switch case ////////////////////////////////////////////////
+
+int employeeLevel = 100;
+string employeeName = "John Smith";
+
+string employeeTitle = "";
+
+switch (employeeLevel)
+{
+    case 100:
+        employeeTitle = "Junior Associate";
+        break;
+    case 200:
+        employeeTitle = "Senior Associate";
+        break;
+    case 300:
+        employeeTitle = "Manager";
+        break;
+    case 400:
+        employeeTitle = "Senior Manager";
+        break;
+    default:
+        employeeTitle = "Associate";
+        break;
+}
+
+Console.WriteLine($"{employeeName}, {employeeTitle}");
+
+
+// SKU = Stock Keeping Unit
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string stockType = "";
+string stockColor = "";
+string stockSize = "";
+
+switch (product[0])
+{
+    case "01":
+        stockType = "Sweat shirt";
+        break;
+    case "02":
+        stockType = "T-Shirt";
+        break;
+    case "03":
+        stockType = "Sweat pants";
+        break;
+    default:
+        stockType = "Other";
+        break;
+}
+
+switch (product[1])
+{
+    case "BL":
+        stockColor = "Black";
+        break;
+    case "MN":
+        stockColor = "Maroon";
+        break;
+    default:
+        stockColor = "White";
+        break;
+}
+
+switch (product[2])
+{
+    case "S":
+        stockSize = "Small";
+        break;
+    case "M":
+        stockSize = "Medium";
+        break;
+    case "L":
+        stockSize = "Large";
+        break;
+    default:
+        stockSize = "One Size Fits All";
+        break;
+}
+
+Console.WriteLine($"Product: {stockSize} {stockColor} {stockType}");
