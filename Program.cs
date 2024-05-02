@@ -408,3 +408,26 @@ while (current >= 3)
 }
 Console.WriteLine($"Last number: {current}");
 
+
+
+//////////////////////////////////////////////// Role Playing gme challenge //////////////////////////////////////////////////////
+
+Console.WriteLine("\n\nRole Playing game challenge");
+Random attackPwr = new();
+int heroHealth = 10;
+int monsterHealth = 10;
+
+while(heroHealth > 0 && monsterHealth > 0){
+    int attack = attackPwr.Next(1, 10);
+    monsterHealth -= attack;
+    Console.WriteLine($"Monster was damaged and lost {attack} health and now has {monsterHealth} health.");
+    if(monsterHealth <= 0){
+        Console.WriteLine("Hero wins!");
+        continue;
+    }
+    attack = attackPwr.Next(1, 10);
+    heroHealth -= attack;
+    Console.WriteLine($"Hero was damaged and lost {attack} health and now has {heroHealth} health.");
+    if(heroHealth <= 0) Console.WriteLine("Monster wins!");
+}
+
