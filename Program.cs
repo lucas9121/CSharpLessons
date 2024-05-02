@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Basic info");
 Random dice = new Random();
 
 int roll1 = dice.Next(1, 7);
@@ -60,6 +61,7 @@ if(daysUntilExpiration > 5 && daysUntilExpiration <= 10){
 
 //////////////////////////////////////////////// for each ////////////////////////////////////////////////
 
+Console.WriteLine("\n\nforEach loop");
 string[] fraudulentOrderIDs = new string[3];
 
 fraudulentOrderIDs[0] = "A123";
@@ -101,6 +103,7 @@ foreach(string nameID in newFraudulentOrderIDs){
 
 //////////////////////////////////////////////// Student Grade ////////////////////////////////////////////////
 
+Console.WriteLine("\n\nStudent Grades challenge");
 int examAssignments = 5;
 
 string[] studentNames = ["Sophia", "Andrew", "Emma", "Logan"];
@@ -224,6 +227,7 @@ foreach (string name in studentNames)
 
 //////////////////////////////////////////////// Boolean Expressions ////////////////////////////////////////////////
 
+Console.WriteLine("\n\nBoolean expressions");
 string permission = "Admin|Manager";
 int level = 53;
 
@@ -258,6 +262,7 @@ else
 
 //////////////////////////////////////////////// Variable Scope ////////////////////////////////////////////////
 
+Console.WriteLine("\n\nVariable scope");
 int[] numbers = { 4, 8, 15, 16, 23, 42 };
 int totalNumbers = 0;
 bool found = false;
@@ -278,6 +283,7 @@ Console.WriteLine($"Total: {totalNumbers}");
 
 //////////////////////////////////////////////// Switch case ////////////////////////////////////////////////
 
+Console.WriteLine("\n\nSwitch Case");
 int employeeLevel = 100;
 string employeeName = "John Smith";
 
@@ -364,8 +370,7 @@ Console.WriteLine($"Product: {stockSize} {stockColor} {stockType}");
 
 //////////////////////////////////////////////// Fizz Buzz //////////////////////////////////////////////////////
 
-
-
+Console.WriteLine("\n\nFizz Buzz with for loop");
 for(int i = 0; i < 10; i++){
     Console.Write(i);
     if(i % 3 == 0 && i % 5 == 0){
@@ -379,4 +384,27 @@ for(int i = 0; i < 10; i++){
     }
 }
 
+
+
+//////////////////////////////////////////////// do while loop //////////////////////////////////////////////////////
+
+Console.WriteLine("\n\nDo while loop");
+Random randomNum = new();
+int current = 0;
+
+// do while will eecute at least once
+do
+{
+    current = random.Next(1, 11);
+    Console.WriteLine($"Do while: {current}");
+} while (current != 7);
+
+
+// while loop will only execute if the condition isn't met.
+while (current >= 3)
+{
+    Console.WriteLine($"While: {current}");
+    current = random.Next(1, 11);
+}
+Console.WriteLine($"Last number: {current}");
 
